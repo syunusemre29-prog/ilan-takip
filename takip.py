@@ -86,7 +86,7 @@ def uygun_mu(it):
 
 def bildir(topic, it):
     govde = {"topic": topic, "title": "Yeni ilan", "message": it["baslik"],
-             "click": it["link"], "tags": ["briefcase"]}
+             "click": it["link"], "tags": ["briefcase"], "priority": 4}
     req = urllib.request.Request(
         "https://ntfy.sh/",
         data=json.dumps(govde).encode("utf-8"),
